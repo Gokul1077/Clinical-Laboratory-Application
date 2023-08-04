@@ -1,0 +1,69 @@
+<div class="container mt-4" >
+    <div class="card">
+            <h1>Patient Information</h1>
+    
+    <form>
+        <!-- <div class="form-group">
+            <label>Patient Id</label>
+            <input type="number" [(ngModel)]="patientId" [ngModelOptions]="{standalone: true}" class="form-control" id="stname" placeholder="Enter Name">
+          </div> -->
+        <div class="form-group">
+          <label>Patient Name</label>
+          <input type="text" [(ngModel)]="patientName" [ngModelOptions]="{standalone: true}" class="form-control" id="stname" placeholder="Enter Name">
+        </div>
+    
+        <div class="form-group">
+          <label>Birth Date</label>
+          <input type="text" [(ngModel)]="patientDOB" [ngModelOptions]="{standalone: true}" class="form-control" id="course" placeholder="Enter Name">
+        </div>
+
+        <div class="form-group">
+            <label>Patient Age</label>
+            <input type="number" [(ngModel)]="patientAge" [ngModelOptions]="{standalone: true}" class="form-control" id="course" placeholder="Enter Name">
+        </div>
+          <div class="form-group">
+            <label>Date</label>
+            <input type="text" [(ngModel)]="date" [ngModelOptions]="{standalone: true}" class="form-control" id="course" placeholder="Enter Name">
+          </div>
+          <div class="form-group">
+            <label>Doctor Ref</label>
+            <input type="text" [(ngModel)]="doctorRef" [ngModelOptions]="{standalone: true}" class="form-control" id="course" placeholder="Enter Name">
+          </div>
+          <div class="form-group">
+            <label>Premium Status </label>
+            <input type="text" [(ngModel)]="status" [ngModelOptions]="{standalone: true}" class="form-control" id="course" placeholder="Enter Name">
+          </div>
+          <div class="form-group">
+            <label>Registered By</label>
+            <input type="text" [(ngModel)]="registeredBy" [ngModelOptions]="{standalone: true}" class="form-control" id="course" placeholder="Enter Name">
+          </div>
+    
+        <button type="submit" class="btn btn-primary mt-4" (click)="save()" >Save</button>
+       
+      </form>
+    </div>
+
+        <div class="container mt-4" >
+            <h1>Student Table</h1>
+        <table class="table">
+            <thead>
+             <h1 *ngIf="!isResultLoaded">Loading.................</h1>      
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Patient Name</th>
+                <th scope="col">Patient Test Details</th>  
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let pat of PatientArray">
+                    <td>{{pat.patientId}}</td>
+                <td>{{pat.patientName}}</td>
+                <td>{{pat.testDetails}}</td>
+                <td>
+                    <button type="button" class="btn btn-success" (click)="setUpdate(pat)">Edit</button>
+                    <button type="button" class="btn btn-danger" (click)="setDelete(pat)">Delete</button>            
+                </td>
+              </tr>          
+            </tbody>
+          </table>
+        </div>

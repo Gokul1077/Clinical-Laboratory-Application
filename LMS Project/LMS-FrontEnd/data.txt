@@ -1,0 +1,11 @@
+{
+  "patientId": 1,
+  "patientName": "PK",
+  "patientDOB": "04-12-2000",
+  "patientAge": 22,
+  "date": "04-08-2023",
+  "doctorRef": "Dr.Pal",
+  "testDetails": "Blood Group test",
+  "status": "Paid",
+  "registeredBy": "Sandhiya"
+}
